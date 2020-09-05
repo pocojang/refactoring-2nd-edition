@@ -46,7 +46,7 @@ export default function statement(invoice: Invoice, plays: Plays) {
       volumeCredits += Math.floor(perf.audience / 5);
     }
 
-    result += `총액 ${play.name} : ${format(thisAmount / 100)} (${
+    result += `${play.name} : ${format(thisAmount / 100)} (${
       perf.audience
     }석)\n`;
     totalAmount += thisAmount;
