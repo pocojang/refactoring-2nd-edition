@@ -11,8 +11,6 @@ export default function statement(invoice: Invoice, plays: Plays) {
     minimumFractionDigits: 2,
   }).format;
 
-  console.log(invoice.performances);
-
   for (let perf of invoice.performances) {
     const play = plays[perf.playID];
 
@@ -23,7 +21,7 @@ export default function statement(invoice: Invoice, plays: Plays) {
         thisAmount = 40000;
 
         if (perf.audience > 30) {
-          thisAmount += 10000 + 500 * (perf.audience - 30);
+          thisAmount += 1000 * (perf.audience - 30);
         }
         break;
       case 'comedy': // 희극
@@ -32,6 +30,8 @@ export default function statement(invoice: Invoice, plays: Plays) {
         if (perf.audience > 20) {
           thisAmount += 10000 + 500 * (perf.audience - 20);
         }
+        thisAmount += 300 * perf.audience;
+
         break;
 
       default:
