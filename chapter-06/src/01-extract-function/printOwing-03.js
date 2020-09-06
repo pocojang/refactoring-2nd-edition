@@ -1,22 +1,24 @@
 /**
- * 지역 변수를 사용할 때
+ * 지역 변수의 값을 변경할 때
  */
 function printOwing(invoice) {
-  let outstanding = 0;
-
-  // 배너 출력 로직을 함수로 추출
   printBanner();
 
-  // 미해결 채무 (outstanding)를 계산한다.
+  // 함수 추출 완료. 추출한 함수가 반환한 값을 원래 변수에 저장
+  const outstanding = calculateOutstanding(invoice);
+
+  recordDueDate(invoice);
+  printDetails(invoice, outstanding);
+}
+
+function calculateOutstanding(invoice) {
+  let result = 0;
+
   for (const o of invoice.orders) {
-    outstanding += o.amount;
+    result += o.amount;
   }
 
-  // 마감일 설정 로직 함수로 추출
-  recordDueDate(invoice);
-
-  // 지역 변수를 매개변수로 전달
-  printDetails(invoice, outstanding);
+  return result;
 }
 
 function recordDueDate(invoice) {
