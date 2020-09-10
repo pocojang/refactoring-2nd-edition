@@ -24,7 +24,7 @@ class Person {
 }
 
 class TelephoneNumber {
-  get _areaCode() {
+  get areaCode() {
     return this._areaCode;
   }
 
