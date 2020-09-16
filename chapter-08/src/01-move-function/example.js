@@ -8,6 +8,6 @@ class Account {
 /**
  * 리팩토링 후
  */
-class Account {
+class AccountType {
   get overdraftCharge() {}
 }

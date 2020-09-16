@@ -1,3 +1,6 @@
+/**
+ * 다른 클래스 옮기기
+ */
 class Account {
   // 은행 이자 계산
   get bankCharge() {
