@@ -25,6 +25,7 @@ function createBird(bird) {
   }
 }
 
+// extends reference Bird-02.js
 class EuropeanSwallow extends Bird {
   get plumage() {
     return '보통이다';
@@ -35,6 +36,7 @@ class EuropeanSwallow extends Bird {
   }
 }
 
+// extends reference Bird-02.js
 class AfricanSwallow extends Bird {
   get plumage() {
     return this.numberOfCoconuts > 2 ? '지쳤다' : '보통이다';
@@ -45,6 +47,7 @@ class AfricanSwallow extends Bird {
   }
 }
 
+// extends reference Bird-02.js
 class NorwegianBlueParrot extends Bird {
   get plumage() {
     return this.voltage > 100 ? '그을렸다' : '예쁘다';
