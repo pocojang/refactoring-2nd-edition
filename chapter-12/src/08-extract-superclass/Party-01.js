@@ -1,0 +1,3 @@
+class Party {
+  constructor() {}
+}
