@@ -1,3 +1,7 @@
+/**
+ * 예시: 서브 클래스가 하나일때
+ */
+
 class Booking {
   constructor(show, date) {
     this._show = show;
